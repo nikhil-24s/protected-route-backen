@@ -13,9 +13,11 @@ connectToDb()
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: 'https://protected-route-frontend.vercel.app',
-    credentials: true
-}))
+    origin: 'https://protected-route-frontend.vercel.app', 
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization'] 
+  }));
 
 // Routes 
 app.use('/api',userRoutes)
