@@ -13,7 +13,7 @@ connectToDb()
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: 'https://protected-route-frontend.vercel.app/',
+    origin: 'https://protected-route-frontend.vercel.app',
     credentials: true
 }))
 
