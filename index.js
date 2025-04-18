@@ -21,6 +21,9 @@ app.use(cors({
 
 // Routes 
 app.use('/api',userRoutes)
+app.get('/',(req, res)=>{
+    res.send('hello world')
+})
 
 // Server 
 const port =  process.env.PORT || 4000
